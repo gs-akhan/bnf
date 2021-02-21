@@ -1,0 +1,27 @@
+// Lexical Grammar
+
+%lex 
+
+%%
+
+\s+ /* skip whitespaces*/
+
+var return 'VAR_KEYWORD'
+\w+ return 'IDENTIFIER'
+\; return 'SEMI_COLON'
+
+/lex
+
+
+// Syntactic Grammar
+
+%%
+
+E 
+    : VAR_KEYWORD IDENTIFIER '=' IDENTIFIER SEMI_COLON
+    | VAR_KEYWORD IDENTIFIER '=' IDENTIFIER
+    | VAR_KEYWORD IDENTIFIER SEMI_COLON
+    | VAR_KEYWORD IDENTIFIER
+    ;
+  
+

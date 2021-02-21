@@ -1,0 +1,20 @@
+{
+  "name": "learningbnf",
+  "version": "1.0.0",
+  "description": "Practising BNG Grammars for AST generation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ast" : "syntax-cli --grammar second.bnf --mode LALR1 --parse 'var name = 'azhar''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gs-akhan/bnf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gs-akhan/bnf/issues"
+  },
+  "homepage": "https://github.com/gs-akhan/bnf#readme"
+}

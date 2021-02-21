@@ -1,0 +1,23 @@
+// Lexical Grammar
+
+%lex
+
+%%
+
+\s+     /*skip whitespaces*/
+\d+     return 'NUMBER'
+
+/lex
+
+
+// ------ Syntactic Grammar 
+%%
+
+E
+    : E '+' T
+    | T
+    ;
+
+T
+    : NUMBER
+    ;
