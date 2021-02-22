@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ast" : "syntax-cli --grammar second.bnf --mode LALR1 --parse 'var name = 'azhar''"
-  },
+    "ast" : "syntax-cli --grammar variable.bnf --mode LALR1 --parse 'var name = \\'122\\''"  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gs-akhan/bnf.git"

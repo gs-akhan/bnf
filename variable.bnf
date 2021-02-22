@@ -1,0 +1,29 @@
+// Lexical Grammar 
+
+%lex
+
+%%
+\s+	/* skip whitespaces */
+\d+ return 'NUMBER'
+\"\w+\" return STRING_LITERAL
+[+\-] return 'OPERATOR'
+\'\w+\' return 'STRING_LITERAL'
+var return 'VARIABLE_KEYWORD'
+\w+ return 'IDENTIFIER'
+\=	return 'ASSIGNMENT_OPERATOR'
+
+/lex
+
+
+%%
+
+Expression 
+	: VARIABLE_KEYWORD IDENTIFIER ASSIGNMENT_OPERATOR LITERAL;
+
+LITERAL
+	: NUMBER
+	| STRING_LITERAL
+	;
+
+
+	
