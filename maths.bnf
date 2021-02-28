@@ -1,0 +1,24 @@
+// Lexical Grammar 
+
+
+%lex 
+
+%%
+
+\s+ /*skip whitespaces */
+\d+ return 'NUMBER'
+
+/lex
+
+%left '+'
+
+%%
+
+Expression
+	: t
+	;
+t
+	: t '+' t
+	| '(' Expression ')'
+	| NUMBER
+	;
